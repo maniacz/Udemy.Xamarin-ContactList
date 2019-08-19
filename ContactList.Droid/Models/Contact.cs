@@ -23,7 +23,6 @@ namespace ContactList.Droid
             Name = name;
             Email = email;
             PhoneNumber = phoneNumber;
-
         }
     }
 }
