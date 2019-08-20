@@ -29,9 +29,28 @@
                                     <segue id="499" destination="367" kind="show"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="943" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="16" y="126" width="288" height="422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="944">
+                                        <rect key="frame" x="0.0" y="28" width="288" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="944" id="945">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="64.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                     </view>
                     <navigationItem title="Contact List" id="360" key="navigationItem"/>
+                    <connections>
+                        <outlet property="ContactTableView" destination="943" id="name-outlet-943"/>
+                        <outlet property="AddButton" destination="363" id="name-outlet-363"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,11 +69,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="236" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-549" y="8"/>
+            <point key="canvasLocation" x="-552" y="16"/>
         </scene>
         <scene sceneID="366">
             <objects>
-                <viewController id="367" sceneMemberID="viewController">
+                <viewController id="367" sceneMemberID="viewController" customClass="AddContactViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="364"/>
                         <viewControllerLayoutGuide type="bottom" id="365"/>

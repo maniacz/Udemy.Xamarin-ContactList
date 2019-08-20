@@ -11,8 +11,8 @@ using UIKit;
 
 namespace ContactList.iOS
 {
-    [Register ("MainViewController")]
-    partial class MainViewController
+    [Register ("AddContactViewController")]
+    partial class AddContactViewController
     {
     }
 }
