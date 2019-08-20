@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="233">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,83 +11,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="565" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="184" y="70" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="363" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="117" y="78" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Button"/>
                                 <connections>
-                                    <segue id="665" destination="569" kind="show"/>
+                                    <segue id="499" destination="367" kind="show"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1095" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="61" y="231" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1096" rowHeight="587">
-                                <rect key="frame" x="20" y="102" width="383" height="587"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1096" id="1097">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="586.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </subviews>
-                        <constraints>
-                            <constraint id="1104" firstItem="1095" firstAttribute="width" secondItem="1096" secondAttribute="width"/>
-                            <constraint id="1105" firstItem="1095" firstAttribute="height" secondItem="1096" secondAttribute="height"/>
-                            <constraint id="1106" firstItem="1095" firstAttribute="height" secondItem="1096" secondAttribute="height"/>
-                            <constraint id="1121" firstItem="565" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
-                        </constraints>
                     </view>
-                    <navigationItem title="Contact List" id="562" key="navigationItem"/>
-                    <connections>
-                        <outlet property="MainViewController" destination="8bC-Xf-vdC" id="name-outlet-8bC-Xf-vdC"/>
-                    </connections>
+                    <navigationItem title="Contact List" id="360" key="navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-6"/>
+            <point key="canvasLocation" x="-199" y="15"/>
         </scene>
         <scene sceneID="232">
             <objects>
                 <navigationController id="233" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="235">
-                        <rect key="frame" x="0.0" y="20" width="414" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue id="563" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
+                        <segue id="361" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="236" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-573" y="-6"/>
+            <point key="canvasLocation" x="-549" y="8"/>
         </scene>
-        <scene sceneID="568">
+        <scene sceneID="366">
             <objects>
-                <viewController id="569" sceneMemberID="viewController">
+                <viewController id="367" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="566"/>
-                        <viewControllerLayoutGuide type="bottom" id="567"/>
+                        <viewControllerLayoutGuide type="top" id="364"/>
+                        <viewControllerLayoutGuide type="bottom" id="365"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="570">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <view key="view" contentMode="scaleToFill" id="368">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="571" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="369" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="-4"/>
+            <point key="canvasLocation" x="162" y="12"/>
         </scene>
     </scenes>
 </document>

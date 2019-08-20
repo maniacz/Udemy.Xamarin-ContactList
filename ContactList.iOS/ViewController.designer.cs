@@ -14,16 +14,5 @@ namespace ContactList.iOS
     [Register ("ViewController")]
     partial class ViewController
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIView MainViewController { get; set; }
-
-        void ReleaseDesignerOutlets ()
-        {
-            if (MainViewController != null) {
-                MainViewController.Dispose ();
-                MainViewController = null;
-            }
-        }
     }
 }
