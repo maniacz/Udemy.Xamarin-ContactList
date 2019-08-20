@@ -18,7 +18,7 @@ namespace ContactList.iOS
         {
             base.ViewDidLoad();
             AutomaticallyAdjustsScrollViewInsets = false;
-            ContactTableView.Source = new ContactTableViewSource(ContactTableView, contacts);
+            ContactTableView.Source = new ContactTableViewSource(ContactTableView, contacts, this);
             ContactTableView.AllowsSelection = false;
         }
 

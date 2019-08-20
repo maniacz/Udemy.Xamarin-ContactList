@@ -24,6 +24,29 @@ namespace ContactList.iOS.Controllers.MainView
         {
             NameLabel.Text = contact.Name;
             PhoneNumberLabel.Text = contact.PhoneNumber;
+
+            EmailImageView.UserInteractionEnabled = true;
+            EmailImageView.AddGestureRecognizer(new UITapGestureRecognizer(x =>
+            {
+                var url = NSUrl.FromString(string.Format("mailto:{0}", contact.Email));
+                OpenUrl(url);
+            }));
+
+            PhoneImageView.UserInteractionEnabled = true;
+            PhoneImageView.AddGestureRecognizer(new UITapGestureRecognizer(x =>
+            {
+                var url = NSUrl.FromString(string.Format("tel:{0}", contact.PhoneNumber.Replace(" ", "")));
+                OpenUrl(url);
+            }));
+        }
+
+        private void OpenUrl(NSUrl url)
+        {
+            if (!UIApplication.SharedApplication.OpenUrl(url))
+            {
+                var alert = new UIAlertView("Not supported", "This is not supported on your device", null, "OK", null);
+                alert.Show();
+            }
         }
     }
 }
