@@ -17,8 +17,9 @@ namespace ContactList.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
+            AutomaticallyAdjustsScrollViewInsets = false;
             ContactTableView.Source = new ContactTableViewSource(ContactTableView, contacts);
+            ContactTableView.AllowsSelection = false;
         }
 
         private void Initialize()
@@ -32,6 +33,12 @@ namespace ContactList.iOS
                                         "+48 123 123 123"));
 
             }
+        }
+
+        public void AddContact(Contact contact)
+        {
+            contacts.Add(contact);
+            ContactTableView.ReloadData();
         }
     }
 }
