@@ -9,6 +9,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
+using ContactList.SharedProject;
 
 namespace ContactList.Droid
 {
@@ -32,7 +33,8 @@ namespace ContactList.Droid
                 StartActivityForResult(typeof(AddActivity), ADD_CONTACT_REQUEST_CODE);
             };
 
-            Initialize();
+            //Initialize();
+            contacts = ContactListDataSource.GetContacts();
 
             var contactListView = FindViewById<ListView>(Resource.Id.contactListView);
             adapter = new ContactListAdapter(contacts, this);

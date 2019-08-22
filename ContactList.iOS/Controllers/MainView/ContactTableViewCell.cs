@@ -2,6 +2,7 @@
 
 using Foundation;
 using UIKit;
+using ContactList.SharedProject;
 
 namespace ContactList.iOS.Controllers.MainView
 {

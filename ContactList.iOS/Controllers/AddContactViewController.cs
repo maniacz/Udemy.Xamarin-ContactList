@@ -1,6 +1,7 @@
 using Foundation;
 using System;
 using UIKit;
+using ContactList.SharedProject;
 
 namespace ContactList.iOS
 {

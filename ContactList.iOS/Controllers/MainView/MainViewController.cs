@@ -3,6 +3,7 @@ using Foundation;
 using System;
 using System.Collections.Generic;
 using UIKit;
+using ContactList.SharedProject;
 
 namespace ContactList.iOS
 {
@@ -11,7 +12,7 @@ namespace ContactList.iOS
         private List<Contact> contacts;
         public MainViewController (IntPtr handle) : base (handle)
         {
-            Initialize();
+            contacts = ContactListDataSource.GetContacts();
         }
 
         public override void ViewDidLoad()
@@ -20,19 +21,6 @@ namespace ContactList.iOS
             AutomaticallyAdjustsScrollViewInsets = false;
             ContactTableView.Source = new ContactTableViewSource(ContactTableView, contacts, this);
             ContactTableView.AllowsSelection = false;
-        }
-
-        private void Initialize()
-        {
-            contacts = new List<Contact>();
-
-            for (int i = 1; i <= 20; i++)
-            {
-                contacts.Add(new Contact("My Contact " + i,
-                                        "contact_email@gmail.com",
-                                        "+48 123 123 123"));
-
-            }
         }
 
         public void AddContact(Contact contact)

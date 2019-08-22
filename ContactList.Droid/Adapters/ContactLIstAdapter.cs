@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using ContactList.SharedProject;
 
 namespace ContactList.Droid
 {

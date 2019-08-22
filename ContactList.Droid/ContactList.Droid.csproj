@@ -62,7 +62,6 @@
     <Compile Include="Activities\AddActivity.cs" />
     <Compile Include="Adapters\ContactLIstAdapter.cs" />
     <Compile Include="Activities\MainActivity.cs" />
-    <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\ContactViewHolder.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +121,7 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
+  <Import Project="..\ContactList.SharedProject\ContactList.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.
