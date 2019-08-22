@@ -178,6 +178,11 @@
       <DependentUpon>MainViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <Import Project="..\ContactList.SharedProject\ContactList.SharedProject.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\ContactList.NETStandard\ContactList.NETStandard.csproj">
+      <Project>{3e9049c6-a89c-48cc-b43f-05da77e03984}</Project>
+      <Name>ContactList.NETStandard</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
